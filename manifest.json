@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Anti Pubs sur l'equip",
+  "description": "Supprime les pubs sur l'equip",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { 
+          "128": "icon.png" },
+  "background": {
+    "persistent": false,
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [
+    {
+        "matches": ["*://*/*"],
+        "js": [ "content_script.js" ],
+        "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/",
+    "contextMenus",
+    "http://*/*", 
+    "https://*/*"
+  ]
+}
