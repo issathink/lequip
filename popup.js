@@ -92,6 +92,17 @@ function renderStatus(statusText) {
   document.getElementById('status').textContent = statusText;
 }
 
+var message = "Extension pour consulter le site l'equip sans desactiver adblock.";
+var description = "";
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('description').textContent = description;
+  document.getElementById('message').textContent = message;
+});
+
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     // Put the image URL in Google search.
@@ -116,3 +127,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+*/
